@@ -25,20 +25,22 @@ const TodoFooter = ({ store, clearCompleted }) => (
       <strong>{(store.remainingCount)}</strong>
       {(store.remainingCount === 1 ? ' item' : ' items')} left
     </span>
-    <ul class='filters'>
-      <li><a
-        href='#/'
-        classList={({selected: store.showMode === 'all'})}
-      >All</a></li>
-      <li><a
-        href='#/active'
-        classList={({selected: store.showMode === 'active'})}
-      >Active</a></li>
-      <li><a
-        href='#/completed'
-        classList={({selected: store.showMode === 'completed'})}
-      >Completed</a></li>
-    </ul>
+    <nav>
+      <ul class='filters'>
+        <li><a
+          href='#/'
+          classList={({selected: store.showMode === 'all'})}
+        >All</a></li>
+        <li><a
+          href='#/active'
+          classList={({selected: store.showMode === 'active'})}
+        >Active</a></li>
+        <li><a
+          href='#/completed'
+          classList={({selected: store.showMode === 'completed'})}
+        >Completed</a></li>
+      </ul>
+    </nav>
     <Show when={(store.completedCount > 0)}>
       <button
         class='clear-completed'
@@ -62,13 +64,17 @@ function App() {
     window.removeEventListener('hashchange', locationHandler)
   );
   return (
-    <section class='todoapp'>
-      <TodoHeader addTodo={addTodo} />
+    <div>
+      <section class='todoapp'>
+        <TodoHeader addTodo={addTodo} />
+        <Show when={(store.todos.length > 0)}>
+          <TodoList {...{store, toggleAll, editTodo, removeTodo}}/>
+        </Show>
+      </section>
       <Show when={(store.todos.length > 0)}>
-        <TodoList {...{store, toggleAll, editTodo, removeTodo}}/>
         <TodoFooter store={store} clearCompleted={clearCompleted} /> 
       </Show>
-    </section>
+    </div>
     )
 }
 

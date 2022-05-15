@@ -1,5 +1,5 @@
-import createLocalState from './todos-localstate';
-
+import createLocalState from '../todos-localstate';
+import {createEffect} from 'solid-js';
 function createTodosStore() {
   const [state, setState] = createLocalState({
     counter: 1, todos: [], showMode: 'all'

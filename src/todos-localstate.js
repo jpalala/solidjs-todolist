@@ -1,10 +1,10 @@
-import { createState, createEffect } from 'solid-js';
+import { createSignal, createEffect } from 'solid-js';
 const LOCAL_STORAGE_KEY = 'todos-solid';
 
 function createLocalState(value) {
   // load stored todos on init
   const stored = localStorage.getItem(LOCAL_STORAGE_KEY),
-    [state, setState] = createState(
+    [state, setState] = createSignal(
       stored ? JSON.parse(stored) : value
     );
   
