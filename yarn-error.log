@@ -1,0 +1,47 @@
+Arguments: 
+  /Users/jose.palala/.nvm/versions/node/v16.14.0/bin/node /Users/jose.palala/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/jose.palala/.rvm/gems/ruby-3.0.0/bin:/Users/jose.palala/.rvm/gems/ruby-3.0.0@global/bin:/Users/jose.palala/.rvm/rubies/ruby-3.0.0/bin:/Users/jose.palala/.yarn/bin:/Users/jose.palala/.config/yarn/global/node_modules/.bin:/Users/jose.palala/.nvm/versions/node/v16.14.0/bin:/opt/homebrew/Cellar/pyenv-virtualenv/1.1.5/shims:/Users/jose.palala/.pyenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:~/.dotnet/tools:/usr/local/go/bin:/opt/homebrew/opt/fzf/bin:/Users/jose.palala/.rvm/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/jose.palala/Library/Caches/Yarn/v6/npm-lru-cache-6.0.0-6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94-integrity/node_modules/lru-cache/README.md' -> '/Users/jose.palala/gitrepos/solid/todolist/node_modules/solid-scripts/node_modules/lru-cache/README.md'
+
+npm manifest: 
+  {
+    "name": "solidjs-todolist",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+      "solid-js": "^1.4.1",
+      "solid-scripts": "0.0.61"
+    },
+    "dependencies": {},
+    "scripts": {
+      "start": "solid-scripts start",
+      "build": "solid-scripts build",
+      "test": "solid-scripts test"
+    },
+    "browserslist": [
+      "Chrome 74",
+      "Firefox 63",
+      "Safari 11",
+      "Edge 17",
+      "Node 10"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

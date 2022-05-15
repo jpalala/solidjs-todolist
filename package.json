@@ -4,9 +4,8 @@
   "private": true,
   "devDependencies": {
     "solid-js": "^1.4.1",
-    "solid-scripts": "0.0.61"
+    "solid-scripts": "^0.0.61"
   },
-  "dependencies": {},
   "scripts": {
     "start": "solid-scripts start",
     "build": "solid-scripts build",

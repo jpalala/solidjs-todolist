@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import createTodosStore from './stores/todos-create-store';
-import createLocalState from 'todos-localstate';
+
 import './App.css';
 const TodoHeader = ({ addTodo }) => (
   <header class='header'>
@@ -29,7 +29,7 @@ const TodoFooter = ({ store, clearCompleted }) => (
       <li><a
         href='#/'
         classList={({selected: store.showMode === 'all'})}
-      >All</a</li>
+      >All</a></li>
       <li><a
         href='#/active'
         classList={({selected: store.showMode === 'active'})}
